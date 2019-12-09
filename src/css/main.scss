@@ -1,0 +1,265 @@
+@import './color.sass';
+
+
+// font-family: 'Yanone Kaffeesatz', sans-serif;
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    background-color: #f7f7f7;
+}
+
+
+// header
+.header {
+    position: relative;
+}
+.header__top {
+    height: 110px;
+    display: flex;
+}
+
+.header__top_content {
+    width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__regulations {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 300;
+    margin-right: 30px;
+}
+
+.header__regulations::before {
+    content: url(../img/header/watch.png);
+    position: relative;
+    top: 3px;
+    right: 8px;
+}
+
+.header__email {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.header__email::before {
+    content: url(../img/header/forma.png);
+    position: relative;
+    top: 3px;
+    right: 8px;
+}
+
+.header__email:hover {
+    color: #00b7f4;
+    transition: .5s;
+}
+
+.header__tel {
+    color: #000000;
+    font-size: 36px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.header__tel::before {
+    content: url(../img/header/call.png);
+    position: relative;
+    top: 0px;
+    right: 8px;
+}
+
+.header__tel:hover {
+    color: #00b7f4;
+    transition: .5s;
+}
+
+.header__callback {
+    border: none;
+    outline: none;
+    width: 200px;
+    height: 46px;
+    background-color: #4691a9;
+    color: #ffffff;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    cursor: pointer;
+}
+
+.header__callback:hover {
+    background: #00b7f4;
+    transition: .5s;
+}
+
+.header__bottom {
+    width: 100%;
+    height: 60px;
+    background-color: #00b7f4;
+    display: flex;
+    align-items: center;
+}
+
+.header__callback_btn {
+    display: none;
+}
+
+.header__nav {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav__link {
+    position: relative;
+}
+
+.nav__link_a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Yanone Kaffeesatz";
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px;
+}
+
+.dropdown {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    width: 208px;
+    display: none;
+}
+
+.nav__link:hover {
+    .nav__link_a {
+        background-color: #1990b8;
+        padding: 20px;
+    }
+}
+
+.nav__link_drop:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.dropdown__nav__link {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 50px;
+    text-decoration: none;
+    padding-left: 30px;
+    border-bottom: 1px solid #e3e3e3;;
+}
+
+.dropdown__nav__link:last-child {
+    border-bottom: none;
+}
+
+.dropdown__nav__link:hover {
+    color: #00b7f4;
+}
+
+
+// Мобильное меню
+
+.accordeon,
+    .accordeon ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .accordeon li {
+        background-color: #00b7f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .accordeon>li>a {
+        background-color: #00b7f4;
+        color: #fff;
+        display: block;
+        font-size: 20px;
+        height: 40px;
+        line-height: 50px;
+        padding: 0;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+    }
+
+    .accordeon>li.slide>a,
+    .accordeon>li.active>a {
+        background-color: #1990b8;
+        color: #FFF;
+    }
+
+    .accordeon>li>ul {
+        display: none;
+        width: 100%;
+        background: #FFF;
+        padding: 0;
+    }
+
+    .accordeon>li.active>ul {
+        display: block;
+    }
+
+    .accordeon>li>ul>li>a {
+        padding: 0px;
+        height: 50px;
+        background-color: #ffffff;
+        text-decoration: none;
+        display: block;
+        color: #333;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        border-bottom: 1px solid #e3e3e3;;
+    }
+
+    .accordeon>li>ul>li>a:hover {
+        color: #00b7f4;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        background-color: #fff;
+        color: #000;
+        font-size: 20px;
+        list-style-type: none;
+        width: 100%;
+        margin: 0px auto;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+
+@import './media.scss'
